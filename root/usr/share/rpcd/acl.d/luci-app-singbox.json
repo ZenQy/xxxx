@@ -1,0 +1,25 @@
+{
+  "luci-app-singbox": {
+    "description": "Grant UCI access for luci-app-singbox",
+    "read": {
+      "ubus": {
+        "service": [
+          "list"
+        ]
+      },
+      "file": {
+        "/usr/bin/singbox": [
+          "exec"
+        ]
+      },
+      "uci": [
+        "singbox"
+      ]
+    },
+    "write": {
+      "uci": [
+        "singbox"
+      ]
+    }
+  }
+}

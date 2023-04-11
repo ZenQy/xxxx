@@ -1,0 +1,43 @@
+# 指定字符集的文件头项。（必需）
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+
+# msgid 为源语言文字。
+# msgstr 为翻译后的文字。
+
+# 这是可选注释，标记这个词句在源代码 JavaScript 脚本中的第几行。
+#: applications/luci-app-samba4/htdocs/luci-static/resources/view/samba4.js:97
+msgid "Allow guests"
+msgstr "允许匿名用户"
+
+# 对于比较长的语句，为了方便阅读源码，可以断句书写，见下面的实例。
+# 但需要注意，不允许出现连续两个空格，否则会导致翻译失效。
+#: applications/luci-app-samba4/htdocs/luci-static/resources/view/samba4.js:46
+msgid ""
+"Enables Apple's AAPL extension globally and adds macOS compatibility options "
+"to all shares."
+msgstr "全局启用 Apple 的 AAPL 扩展，并为所有共享添加 macOS 兼容性选项。"
+
+#: applications/luci-app-samba4/htdocs/luci-static/resources/view/samba4.js:63
+msgid ""
+"This is the content of the file '/etc/samba/smb.conf.template' from which "
+"your samba configuration will be generated. Values enclosed by pipe symbols "
+"('|') should not be changed. They get their values from the 'General "
+"Settings' tab."
+msgstr ""
+"这是将从其上生成 samba 配置的文件“/etc/samba/smb.conf.template”的内容。由管道"
+"符（“|”）包围的值不应更改。它们将从“常规设置”标签中获取其值。"
+
+# 翻译文件的冲突优先级。
+# 当同一个源词句被翻译为不同的词句，则最后安装的会优先显示于所有界面。
+# 例如单词 “Enable”，有 A、B、C 软件界面都含有这个源词语，但翻译词语却各不相同。
+# 例如 A 翻译为“启用”，B 翻译为“打开”，C 翻译为“开启” 
+#  A 安装后，“Enable”显示为“启用”
+#  B 安装后，所有界面的“Enable”将显示为“打开”
+#  C 安装后，所有界面的“Enable”将显示为“开启”
+# 所以为了避免出现这种翻译混乱，请各位开发者用词准确且专业规范。
+
+# 翻译文件的复用。
+# 当一个界面所含的源词句与系统中已安装的翻译文件相同，
+# 则即使这个界面不提供任何翻译文件，界面的相关词句仍然能显示已有的翻译词句。
