@@ -1,25 +1,28 @@
 {
-  "luci-app-singbox": {
-    "description": "Grant UCI access for luci-app-singbox",
-    "read": {
-      "ubus": {
-        "service": [
-          "list"
-        ]
-      },
-      "file": {
-        "/usr/bin/singbox": [
-          "exec"
-        ]
-      },
-      "uci": [
-        "singbox"
-      ]
-    },
-    "write": {
-      "uci": [
-        "singbox"
-      ]
-    }
-  }
+	"luci-app-singbox": {
+		"description": "Grant access to LuCI app sing-box",
+		"read": {
+			"file": {
+				"/etc/passwd": [
+					"read"
+				],
+				"/etc/group": [
+					"read"
+				]
+			},
+			"ubus": {
+				"service": [
+					"list"
+				]
+			},
+			"uci": [
+				"singbox"
+			]
+		},
+		"write": {
+			"uci": [
+				"singbox"
+			]
+		}
+	}
 }

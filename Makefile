@@ -20,7 +20,6 @@ PKG_RELEASE:=1
 # 标记日期，可选
 PKG_DATE:=20230410
 
-
 # 作者信息，可选
 PKG_MAINTAINER:=Zenith <zenqy.qin@gmail.com>
 # 软件许可信息，可选

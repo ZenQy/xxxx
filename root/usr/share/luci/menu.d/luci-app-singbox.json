@@ -1,41 +1,14 @@
 {
-  "admin/services/singbox": {
-    "title": "sing-box",
-    "order": 30,
-    "action": {
-      "type": "firstchild"
-    },
-    "depends": {
-      "acl": [
-        "luci-app-singbox"
-      ],
-      "uci": {
-        "singbox": true
-      }
-    }
-  },
-  "admin/services/singbox/config": {
-    "title": "Configuration",
-    "order": 10,
-    "action": {
-      "type": "view",
-      "path": "singbox/config"
-    }
-  },
-  "admin/services/singbox/files": {
-    "title": "Files",
-    "order": 20,
-    "action": {
-      "type": "view",
-      "path": "singbox/files"
-    }
-  },
-  "admin/services/singbox/log": {
-    "title": "Log",
-    "order": 30,
-    "action": {
-      "type": "view",
-      "path": "singbox/log"
-    }
-  }
+	"admin/services/singbox": {
+		"title": "sing-box Client",
+		"action": {
+			"type": "view",
+			"path": "singbox"
+		},
+		"depends": {
+			"acl": [
+				"luci-app-singbox"
+			]
+		}
+	}
 }
