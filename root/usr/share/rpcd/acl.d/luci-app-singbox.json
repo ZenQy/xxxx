@@ -3,10 +3,10 @@
 		"description": "Grant access to LuCI app sing-box",
 		"read": {
 			"file": {
-				"/etc/passwd": [
+				"/usr/sbin/nginx": [
 					"read"
 				],
-				"/etc/group": [
+				"/usr/sbin/uhttpd": [
 					"read"
 				]
 			},

@@ -1,9 +1,10 @@
 {
 	"admin/services/singbox": {
-		"title": "sing-box Client",
+		"title": "sing-box",
+		"order": 50,
 		"action": {
 			"type": "view",
-			"path": "singbox"
+			"path": "singbox/config"
 		},
 		"depends": {
 			"acl": [
