@@ -12,39 +12,50 @@ return view.extend({
   },
 
   render: function (stats) {
-    var m, s, o;
+    var m, s, o, ss;
 
     m = new form.Map("singbox", _("sing-box"));
 
-    s = m.section(form.GridSection, "server", _("Server List"))
+    s = m.section(form.TypedSection, "server", _("Server List"))
     s.anonymous = true;
-    s.addremove = true;
-    s.nodescriptions = true;
+    // s.addremove = true;
+    // s.nodescriptions = true;
 
-    o = s.tab("server", _("Edit Server Configuration"));
-    o = s.taboption('server', form.Flag, "enabled", _("Enabled"));
-    //是否允许为空值。false则表示否，不允许为空值。
+    s.tab("log", _("Log"));
+    s.tab("dns", _("DNS"));
+    s.tab("ntp", _("NTP"));
+    s.tab("inbounds", _("Inbounds"));
+    s.tab("outbounds", _("Outbounds"));
+    s.tab("route", _("Route"));
+    s.tab("experimental", _("Experimental"));
+
+    o = s.taboption('log', form.Flag, "enabled", _("Enabled"));
     o.rmempty = false;
     o.default = true;
-    // 不在列表展示
-    // o.modalonly = true;
 
-    o = s.taboption('server', form.Value, 'name', _('name'));
-    //占位符，用于提示用户应该输入什么样的字符。
-    o.placeholder = 'Server Alias';
+    o = s.taboption('dns', form.Flag, "enabled", _("Enabled"));
     o.rmempty = false;
+    o.default = true;
 
-    o = s.taboption('server', form.ListValue, "type", _("Server Node Type"));
-    o.value("shadowsocks", _("Shadowsocks"));
-    o.value("vmess", _("Vmess"));
-    o.value("trojan", _("Trojan"));
-    o.default = "shadowsocks";
+    o = s.taboption('ntp', form.Flag, "enabled", _("Enabled"));
     o.rmempty = false;
+    o.default = true;
 
-    o = s.taboption('server', form.Value, 'address', _('Server Address'));
-    //占位符，用于提示用户应该输入什么样的字符。
-    o.placeholder = 'Server Address';
+    o = s.taboption('inbounds', form.Flag, "enabled", _("Enabled"));
     o.rmempty = false;
+    o.default = true;
+
+    o = s.taboption('outbounds', form.Flag, "enabled", _("Enabled"));
+    o.rmempty = false;
+    o.default = true;
+
+    o = s.taboption('route', form.Flag, "enabled", _("Enabled"));
+    o.rmempty = false;
+    o.default = true;
+
+    o = s.taboption('experimental', form.Flag, "enabled", _("Enabled"));
+    o.rmempty = false;
+    o.default = true;
 
     return m.render()
   }
