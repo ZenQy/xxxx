@@ -1,0 +1,29 @@
+config log
+	option disabled '1'
+
+config dns
+	option strategy 'prefer_ipv6'
+
+config dns_servers
+	option tag '1'
+	option address_resolver '3'
+	option address_strategy 'prefer_ipv6'
+	option strategy 'prefer_ipv6'
+	option detour '4'
+	option address '5'
+
+config dns_servers
+	option tag '2'
+	option address '3'
+	option address_resolver '4'
+	option address_strategy 'prefer_ipv6'
+	option strategy 'prefer_ipv6'
+	option detour '5'
+
+config dns_rules
+	option ip_version '4'
+	list inbound '1'
+	list inbound '2'
+
+config dns_fakeip
+	option inet4_range '198.18.0.0/15'
